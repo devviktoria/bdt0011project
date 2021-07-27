@@ -1,0 +1,11 @@
+.gameover {
+    font-size: 96px;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
+
+.gameresult {
+    font-size: 64px;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
