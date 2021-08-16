@@ -13,3 +13,5 @@ https://ambientcg.com/view?id=Ground015
 
 Gravel 002
 https://ambientcg.com/view?id=Gravel002
+
+Please note that the subfolders contains the converted normal maps that can be used in Unity, not the original ones that were included with the textures.
