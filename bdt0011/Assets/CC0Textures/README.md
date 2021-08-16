@@ -1,4 +1,4 @@
-This folder contains the textures that are released under the [CC0 1.0 Universal licence](LICENSE_CC0).
+This folder contains the textures that are released under the [CC0 1.0 Universal licence](/LICENSE_CC0).
 
 Assets from ambientCG.com, licensed under CC0 1.0 Universal:
 
