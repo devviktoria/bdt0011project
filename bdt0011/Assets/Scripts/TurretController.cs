@@ -34,7 +34,7 @@ public class TurretController : MonoBehaviour
     private void Start()
     {
         _leftHandBoundary = 5f;
-        _rightHandBoundary = 175f;
+        _rightHandBoundary = 200f;
         _horizontalInput = 0.0f;
     }
 

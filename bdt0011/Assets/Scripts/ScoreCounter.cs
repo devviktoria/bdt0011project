@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
@@ -14,12 +15,13 @@ public class ScoreCounter : MonoBehaviour
         _messageBroker = GetComponent<MessageBrokerService>().MessageBroker;
         _messageBroker.AlienDied.AddListener(IncrementAlienKillCount);
         _messageBroker.AlienReachedDoor.AddListener(AlienReachedDoor);
+        _messageBroker.GameInitialize.AddListener(Initialize);
     }
 
-    private void Start()
+    private void Initialize(GameData gameData)
     {
-        _maximumAllowedAliensAtDoor = 5;
-        _targetKillCount = 5;
+        _maximumAllowedAliensAtDoor = gameData._maximumAliensAtDoor;
+        _targetKillCount = gameData._targetKillCount;
         _aliensAtDoor = 0;
         _aliensKilled = 0;
     }
@@ -28,6 +30,7 @@ public class ScoreCounter : MonoBehaviour
     {
         _messageBroker.AlienDied.RemoveListener(IncrementAlienKillCount);
         _messageBroker.AlienReachedDoor.RemoveListener(AlienReachedDoor);
+        _messageBroker.GameInitialize.RemoveListener(Initialize);
     }
 
     private void IncrementAlienKillCount()
